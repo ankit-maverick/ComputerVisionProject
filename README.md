@@ -1,6 +1,6 @@
 ### Problem Statement
 
-The problem we attempt to tackle is that of camera egomotion estimation in a stereo camera system. Estimation of camera pose in a world coordinate frame is commonly used in SLAM systems. We have designed our system to be similar to Parallel Tracking and Mapping (PTAM), which is commonly used for camera tracking as it is capable of performing real-time tracking on even low-end hardware. 
+The problem we attempt to tackle is that of camera egomotion estimation in a stereo camera system. Estimation of camera pose in a world coordinate frame is commonly used in SLAM systems. We have designed our system to be similar to Parallel Tracking and Mapping (PTAM)(http://www.robots.ox.ac.uk/~gk/publications/KleinMurray2007ISMAR.pdf), with extra depth data from Kinect, which is commonly used for camera tracking as it is capable of performing real-time tracking on even low-end hardware. Here is the video of PTAM system presented by the authors of the paper(http://www.youtube.com/watch?feature=player_embedded&v=F3s3M0mokNc#!).
 
 
 ### Overview 
