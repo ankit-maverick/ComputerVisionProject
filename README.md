@@ -7,7 +7,7 @@ The problem we attempt to tackle is that of camera egomotion estimation in a ste
 
 Our implementation consists predominantly of three separate components – one for generating a dense depth map from the stereo camera system, another for creating a map of the world from selected keyframes, and the third performing the actual tracking. For real-time operation, we run each of these components on a separate hardware thread asynchronously. 
 
-![STEREO MODULE](https://raw.github.com/ankit-maverick/ComputerVisionProject/blob/master/StereoModule.png)
+![STEREO MODULE](https://raw.github.com/ankit-maverick/ComputerVisionProject/master/StereoModule.png)
 
 The thread responsible for depth map generation performs the simple task of edge detection, following which a sparse depth map is computed using stereo parameters. We then use a form of Gaussian weighting to make the depth map dense. For this, we search for points whose depth is already known in a window around a point. We then assign these points weights based on their distance from the central point similar to a Gaussian distribution centered on the centre point. We then compute the depth of the central point as a weighted average of the depths of all these points. We found this method give a lot better results in actual tracking than depth maps computed using spline interpolation etc.
 
